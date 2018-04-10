@@ -1,0 +1,12 @@
+
+def dailyprogram354(Number):
+    MyNumber = Number
+    MySolution = 1 + MyNumber
+
+    for i in range(1, (MyNumber//2+1)):
+        if MyNumber % i == 0:
+            PossibleSolution = i + (MyNumber // i)
+            if PossibleSolution < MySolution:
+                MySolution = PossibleSolution
+
+    print(MySolution)
